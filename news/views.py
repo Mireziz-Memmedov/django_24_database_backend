@@ -7,4 +7,4 @@ class NewsCoreList(APIView):
     def get(self, request):
         queryset = NewsCore.objects.all()
         serializer = NewsCoreSerializer(queryset, many=True)
-        return Response({'news', serializer.data})
+        return Response({'news': serializer.data})
